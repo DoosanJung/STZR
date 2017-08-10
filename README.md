@@ -1,2 +1,2 @@
 # STZR
-# To share 
+To share 
