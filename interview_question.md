@@ -18,7 +18,6 @@ Here's a brief description of the variables including:
     - How many logs are there with this customer?
     - How many log types are there? (__Hint :__ type) and what are they?
 
-    <br>
 
 2. Drop 'tid's which do not have a specified user (__Hint :__'uid') from the data.
 
@@ -27,7 +26,6 @@ Here's a brief description of the variables including:
     - How many users viewed only one video (__Hint :__'tid') ?
     - How many users viewed more than one videos (__Hint :__'tid') ?
 
-    <br>
 
 3. Draw a table such as follows.
     - You'll only need 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
