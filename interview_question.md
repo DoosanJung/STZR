@@ -43,14 +43,14 @@ Here's a brief description of the variables including:
     - Result would looks like this
 
 
-      | uid   | tid   | ViewHour('tVH') | ... | ... | Bitrate change('brchg') | ... |
-      |-------|-------|-----------------|-----|-----|-------------------------|-----|
-      | uid X | tid 1 | 120000          | ... | ... | 4                       | ... |
-      | uid X | tid 2 | 0               | ... | ... | 0                       | ... |
-      | uid X | tid 3 | 50000           | ... | ... | 0                       | ... |
-      | uid Y | tid 4 | 2532300         | ... | ... | 1200                    | ... |
-      | uid Y | tid 5 | 5000            | ... | ... | 0                       | ... |
-      | ...   | ...   | ...             | ... | ... | ...                     | ... |
+      | uid   | tid   | Viewing time('tVH') | ... | Bitrate change('brchg') | ... |
+      |-------|-------|---------------------|-----|-------------------------|-----|
+      | uid X | tid 1 | 120000              | ... | 4                       | ... |
+      | uid X | tid 2 | 0                   | ... | 0                       | ... |
+      | uid X | tid 3 | 50000               | ... | 0                       | ... |
+      | uid Y | tid 4 | 2532300             | ... | 1200                    | ... |
+      | uid Y | tid 5 | 5000                | ... | 0                       | ... |
+      | ...   | ...   | ...                 | ... | ...                     | ... |
 
 
       <br>
@@ -74,14 +74,14 @@ Often times, we are interested in the summary statistics of our data.
     - Result would looks like this
 
 
-        | uid   | ViewHour('tVH') | ... | ... | Bitrate change('brchg') | ... |
-        |-------|-----------------|-----|-----|-------------------------|-----|
-        | uid X | 34560000        | ... | ... | 40                      | ... |
-        | uid Y | 937400          | ... | ... | 100                     | ... |
-        | uid Z | 17470000        | ... | ... | 20340                   | ... |
-        | uid M | 34985000        | ... | ... | 120000                  | ... |
-        | uid N | 5000            | ... | ... | 0                       | ... |
-        | ...   | ...             | ... | ... | ...                     | ... |
+        | uid   | Viewing time('tVH') | ... | ... | Bitrate change('brchg') | ... |
+        |-------|---------------------|-----|-----|-------------------------|-----|
+        | uid X | 34560000            | ... | ... | 40                      | ... |
+        | uid Y | 937400              | ... | ... | 100                     | ... |
+        | uid Z | 17470000            | ... | ... | 20340                   | ... |
+        | uid M | 34985000            | ... | ... | 120000                  | ... |
+        | uid N | 5000                | ... | ... | 0                       | ... |
+        | ...   | ...                 | ... | ... | ...                     | ... |
 
 _4. Find the user who has maximum viewing time (i.e. the length of the viewing time). How long did the user watched? 'tVH' is in milliseconds, how long the viewing time in hour?
 
