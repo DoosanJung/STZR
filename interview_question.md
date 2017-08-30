@@ -7,7 +7,10 @@ distributed message processing components of Streamlyzer.
 
 Here's a brief description of the variables including:
 
-   ![image](images/resid_plot.png)
+   ![image](imgs/img1.png)
+   ![image](imgs/img2.png)
+   ![image](imgs/img3.png)   
+   ![image](imgs/img4.png)
 <br>
 
 1. Load the data
@@ -78,4 +81,4 @@ Often times, we are interested in the summary statistics of our data.
         | uid N | 5000            | ... | ... | 0                       | ... |
         | ...   | ...             | ... | ... | ...                     | ... |
 
-*4. Plot histogram for each column
+4. Plot histogram for each column
