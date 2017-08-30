@@ -50,7 +50,7 @@ Here's a brief description of the variables including:
       | ...   | ...   | ...             | ... | ... | ...                     | ... |
 
 
-
+<br>
 
 ## Part 2: Descriptive statistics
 
