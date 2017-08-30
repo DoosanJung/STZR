@@ -65,9 +65,9 @@ Often times, we are interested in the summary statistics of our data.
 2. Plot histogram for each column
 
 3. Draw one more table such as follows
-    - You'll use 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns again. Columns related to *time* are continuous variables, while others are categorical variables
+    - You'll use 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns again. Columns related to *time* are continuous variables, while others are categorical variables. Please refer to the table below. Note that 'tid' has gone
 
-    - This time, We want to know each user's summery statistics. Find mean value, standard deviation, minimum value, maximum value for each column.
+    - Find mean value, standard deviation, minimum value, maximum value for each column.
 
     - Describe the meaning of what you've calculated. For example, what does the mean value of 'some number' for viewing time represent?
 
