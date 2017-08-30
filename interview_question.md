@@ -14,30 +14,30 @@ Here's a brief description of the variables including:
 
   From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ ckey)
 
-  **Q1:**
-  - How many logs are there with this customer?
-  - How many log types are there? (__Hint :__ type) and what are they?
+    **Q1:**
+    - How many logs are there with this customer?
+    - How many log types are there? (__Hint :__ type) and what are they?
 
-  <br>
+    <br>
 
 2. Drop 'tid's which do not have a specified user (__Hint :__'uid') from the data.
 
-  **Q2:**
-  - How many users are there?
-  - How many users viewed only one video (__Hint :__'tid') ?
-  - How many users viewed more than one videos (__Hint :__'tid') ?
+    **Q2:**
+    - How many users are there?
+    - How many users viewed only one video (__Hint :__'tid') ?
+    - How many users viewed more than one videos (__Hint :__'tid') ?
 
-  <br>
+    <br>
 
 3. Draw a table such as follows.
-  - You'll only need 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
+    - You'll only need 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
 
-  - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one viewing time log for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X for tid 1 can be calculated
-  <br>(__Hint :__ groupby to the rescue)
+    - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one viewing time log for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X for tid 1 can be calculated
+    <br>(__Hint :__ groupby to the rescue)
 
-  - For the *categorical* variables, you'll need to **count** how many times each category appeared in the logs. For example, how many times bitrate change occurred can be calculated
+    - For the *categorical* variables, you'll need to **count** how many times each category appeared in the logs. For example, how many times bitrate change occurred can be calculated
 
-  - Result would looks like this
+    - Result would looks like this
 
 
       | uid   | tid   | ViewHour('tVH') | ... | ... | Bitrate change('brchg') | ... |
@@ -50,7 +50,7 @@ Here's a brief description of the variables including:
       | ...   | ...   | ...             | ... | ... | ...                     | ... |
 
 
-<br>
+      <br>
 
 ## Part 2: Descriptive statistics
 
