@@ -80,4 +80,8 @@ Often times, we are interested in the summary statistics of our data.
         | uid N | 5000            | ... | ... | 0                       | ... |
         | ...   | ...             | ... | ... | ...                     | ... |
 
-4. Plot histogram for each column
+_4. Find the user who has maximum viewing time. How long did the user watched? 'tVH' is in milliseconds, how long in hour?
+
+_5. Also find the user who watched most videos in terms of 'tid'. How many did the user watched?
+
+_6. Plot histogram for each column
