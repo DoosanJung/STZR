@@ -12,11 +12,11 @@ Here's a brief description of the variables including:
 
 1. Load the data
 
-  From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ ckey)
+  - From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ ckey)
 
-    **Q1:**
-    - How many logs are there with this customer?
-    - How many log types are there? (__Hint :__ type) and what are they?
+  **Q1:**
+  - How many logs are there with this customer?
+  - How many log types are there? (__Hint :__ type) and what are they?
 
 
 2. Drop 'tid's which do not have a specified user (__Hint :__'uid') from the data.
