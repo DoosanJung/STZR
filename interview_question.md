@@ -19,7 +19,7 @@ Here's a brief description of the variables including:
 
     **Q1:**
     - How many logs are there with this customer?
-    - How many log types are there? (__Hint :__ type) and what are they?
+    - How many log types are there? (__Hint :__ 'type') and what are they?
 
 
 2. Drop 'tid's which do not have a specified user (__Hint :__'uid') from the data.
