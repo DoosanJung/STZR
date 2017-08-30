@@ -1,6 +1,9 @@
 Include your answers to this morning's exercises in `answers.py` or `answers.ipynb`
 
-## Part 1: Understand the data
+## Part 1: Access to the data
+Haven't made yet
+
+## Part 2: Understand the data
 
 The streamlyzer lets on-line video service providers measures viewers' experiences in real-time with their assets across various devices and environments. The Streamlyzer allows them to have new insight and tune their performance of their streaming service. The message front is the
 distributed message processing components of Streamlyzer.
@@ -52,7 +55,7 @@ Here's a brief description of the variables including:
 
       <br>
 
-## Part 2: Descriptive statistics
+## Part 3: Descriptive statistics
 
 Often times, we are interested in the summary statistics of our data.
 
@@ -80,8 +83,8 @@ Often times, we are interested in the summary statistics of our data.
         | uid N | 5000            | ... | ... | 0                       | ... |
         | ...   | ...             | ... | ... | ...                     | ... |
 
-_4. Find the user who has maximum viewing time. How long did the user watched? 'tVH' is in milliseconds, how long in hour?
+_4. Find the user who has maximum viewing time (i.e. the length of the viewing time). How long did the user watched? 'tVH' is in milliseconds, how long the viewing time in hour?
 
-_5. Also find the user who watched most videos in terms of 'tid'. How many did the user watched?
+_5. Also find the user who watched most videos in terms of 'tid' (i.e. the number of videos). How many videos did the user watched?
 
 _6. Plot histogram for each column
