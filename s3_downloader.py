@@ -110,36 +110,37 @@ def get_files_from_s3(start_year, start_month, start_day, end_year, end_month, e
     # downloading period
     dates = get_dates(start_year, start_month, start_day, end_year, end_month, end_day)
 
-    # for date in dates:
-    bucket_entries = my_bucket.list(prefix = 'Streamlyzer/dd=' + dates[0])
-    for entry in bucket_entries:
-        key_string = str(entry.key).replace('/','_')
-        s3_path = DOWNLOAD_LOCATION_PATH + key_string
-        try:
-            print "Current File is : ", s3_path
-            entry.get_contents_to_filename(s3_path)
-            gzip_to_csv(s3_path)
+    for date in dates:
+        bucket_entries = my_bucket.list(prefix = 'Streamlyzer/dd=' + date)
+        for entry in bucket_entries:
+            key_string = str(entry.key).replace('/','_')
+            s3_path = DOWNLOAD_LOCATION_PATH + key_string
+            try:
+                print "Current File is : ", s3_path
+                entry.get_contents_to_filename(s3_path)
+                gzip_to_csv(s3_path)
 
-            # TODO: groupby uid and tid and store somewhere;
-            # if next file has same uid and tid, just sum it up!
-            # NOT_TODO: merge multiple gz files into one datafile
+                # remove raw data files ('s3_path')
+                os.remove(s3_path)
 
-            # TODO: remove raw data files ('s3_path')
-            # TODO: Merge csv files into a csv file using concatenate_csv func.
-            # TODO: remove all other csv files
+                # TODO: Merge csv files into a csv file using concatenate_csv func.
+                # if next file has same uid and tid, just sum it up!
+                # NOT_TODO: merge multiple gz files into one datafile
 
-        except (OSError,S3ResponseError) as e:
-            pass
-			# check if the file has been downloaded locally
-            if not os.path.exists(s3_path):
-                try:
-                    os.makedirs(s3_path)
-                    print 'makedir'
-                except OSError as exc:
-					# let guard againts race conditions
-                    import errno
-                    if exc.errno != errno.EEXIST:
-                        raise
+                # TODO: remove all other csv files
+
+            except (OSError,S3ResponseError) as e:
+                pass
+    			# check if the file has been downloaded locally
+                if not os.path.exists(s3_path):
+                    try:
+                        os.makedirs(s3_path)
+                        print 'makedir'
+                    except OSError as exc:
+    					# let guard againts race conditions
+                        import errno
+                        if exc.errno != errno.EEXIST:
+                            raise
 
 
 def concatenate_csv():
@@ -162,4 +163,4 @@ if __name__=="__main__":
     CKEY = '17943e6c6eec49cdb6'
 
     # run the function
-    get_files_from_s3(2017,04,01,2017,06,30)
+    get_files_from_s3(2017,04,06,2017,06,30)
