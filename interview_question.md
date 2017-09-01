@@ -2,7 +2,7 @@ Include your answers to this morning's exercises in `answers.py` or `answers.ipy
 
 ## Part 1: Access to the data
 
-S3 is the storage system on AWS. Here, you will interact with it to take this test. You can use the information below to download the data. Please note that downloading the data will take a while; about two to three minutes.
+S3 is the storage system on AWS. Here, you will interact with it to take this test. You can use the information below to download the data. Please note that downloading the data will take few minutes; about two to three minutes.
 
 ```Python
 bucket_name = 'stlz-dataengineer'
