@@ -79,6 +79,7 @@ Here's a brief description of the variables including:
 
 
 <br>
+
 ## Part 3: Descriptive statistics
 
 Often times, we are interested in the summary statistics of our data.
