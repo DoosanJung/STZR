@@ -30,7 +30,7 @@ Here's a brief description of the variables including:
 
 1. Load the data
 
-    - From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ 'ckey')
+    - From now on, we'll focus on a customer `'17943e6c6eec49cdb6'`. Remove all other customers for following analysis. (__Hint :__ 'ckey')
 
     - The data ranges from *2017-06-29 11:56 pm  ~  2017-06-30 01:20 am*
 
@@ -40,9 +40,9 @@ Here's a brief description of the variables including:
 
 2. Drop the rows with 'tid' which do not have a meaningful value. This tid looks very different from others. I bet you can tell once you find one
 
-    - You'll only need ['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt'] columns from now on. Please note that columns related to *time* are continuous variables, while others are categorical variables
+    - You'll only need `['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt']` columns from now on. Please note that columns related to *time* are continuous variables, while others are categorical variables
 
-    - __Hint :__ 'tid' looks like this: 08e784c7-ecc5-4012-8674-0847dfdef2d1. For some reason, there is a tid with very different value
+    - __Hint :__ 'tid' looks like this: `08e784c7-ecc5-4012-8674-0847dfdef2d1`. For some reason, there is a tid with very different value
 
     - __IMPORTANT :__ Same 'tid's should have same 'uid'. Find the 'tid' with different 'uid'. One way to do this is using `pandas.DataFrame.groupby`.
 
@@ -59,7 +59,7 @@ Here's a brief description of the variables including:
 4. Draw a table such as follows.
 
     - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one viewing time log (during watching a video) for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X and tid 1 can be calculated
-    <br>(__Hint :__ groupby to the rescue)
+    <br>(__Hint :__ `groupby` to the rescue)
 
     - For the *categorical* variables, you'll need to **count** how many times each category appeared in the logs. For example, how many times bitrate change occurred can be calculated
 
@@ -90,7 +90,7 @@ Often times, we are interested in the summary statistics of our data.
 2. Plot histogram for a column 'tVH'. Here, you can convert the time unit into 'minutes' if you want. 'tVH' is in milliseconds
 
 3. Draw one more table such as follows
-    - You'll use 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns again. Again, columns related to *time* are continuous variables, while others are categorical variables. Please refer to the table below. Note that 'tid' has gone
+    - You'll use `['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt']` columns again. Again, columns related to *time* are continuous variables, while others are categorical variables. Please refer to the table below. Note that 'tid' has gone
 
     - Find mean value, standard deviation, minimum value, maximum value for each column.
 
