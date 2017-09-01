@@ -1,7 +1,15 @@
 Include your answers to this morning's exercises in `answers.py` or `answers.ipynb`
 
 ## Part 1: Access to the data
-Haven't made yet
+
+S3 is the storage system on AWS. Here, you will interact with it to take this test.
+The file name you need to connect and download is `FILE NAME HERE`. Use any library/package to read the file from S3.
+I recommend using the library `boto` if you planned to do it with `Python`.
+
+**NOTE: IF YOU CANNOT CONNECT TO OR DOWNLOAD THE DATA FROM AWS S3 BUCKET,
+USE THIS DATA** [_'Interview data'_](https://drive.google.com/open?id=0B5rOf6SBB06BaG9fNkQzRmowQ3M) **INSTEAD**
+
+<br>
 
 ## Part 2: Understand the data
 
@@ -53,8 +61,9 @@ Here's a brief description of the variables including:
       | ...   | ...   | ...                 | ... | ...                     | ... |
 
 
-      <br>
 
+
+<br>
 ## Part 3: Descriptive statistics
 
 Often times, we are interested in the summary statistics of our data.
