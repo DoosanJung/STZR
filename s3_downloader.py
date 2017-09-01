@@ -1,3 +1,8 @@
+##############################################################################
+###  This Python code is designed to fetch the data from our AWS S3 and    ###
+###         process it to generate aggregated sum and count data           ###
+##############################################################################
+
 import os
 import boto
 from boto.exception import S3ResponseError
