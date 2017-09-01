@@ -2,7 +2,7 @@ Include your answers to this morning's exercises in `answers.py` or `answers.ipy
 
 ## Part 1: Access to the data
 
-S3 is the storage system on AWS. Here, you will interact with it to take this test. You can use the information below to download the data. Please note that downloading this data will take while: about two to three minutes.
+S3 is the storage system on AWS. Here, you will interact with it to take this test. You can use the information below to download the data. Please note that downloading the data will take a while; about two to three minutes.
 
 ```Python
 bucket_name = 'stlz-dataengineer'
@@ -31,29 +31,39 @@ Here's a brief description of the variables including:
 
 1. Load the data
 
-  - From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ 'ckey')
+    - From now on, we'll focus on a customer '17943e6c6eec49cdb6'. Remove all other customers for following analysis. (__Hint :__ 'ckey')
 
-    **Q1:**
+    - The data ranges from *2017-06-29 11:56 pm  ~  2017-06-30 01:20 am*
+
     - How many logs are there with this customer?
+
     - How many log types are there? (__Hint :__ 'type') and what are they?
 
-2. Drop the rows with 'tid' which do not have a meaningful value (__Hint :__'tid' looks like this: 08e784c7-ecc5-4012-8674-0847dfdef2d1) from the data.
-  - You'll only need ['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt'] columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
+2. Drop the rows with 'tid' which do not have a meaningful value from the data.
+    - You'll only need ['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt'] columns from now on. Please note that columns related to *time* are continuous variables, while others are categorical variables
 
-    **Q2:**
-    - How many users are there? ...(1)
-    - How many users viewed only one video (__Hint :__'tid') ? ...(2)
-    - How many users viewed more than one videos (__Hint :__'tid') ? ...(3)
+    - __Hint :__ 'tid' looks like this: 08e784c7-ecc5-4012-8674-0847dfdef2d1
+
+    - __IMPORTANT :__ Same 'tid's should have same 'uid'. Find the 'tid' with different 'uid'. One way to do this is using `pandas.DataFrame.groupby`
+
+3. Now we start analyzing this data
+
+    - How many unique users are there ? ...(1)
+
+    - How many users viewed only one tid ? ...(2)
+
+    - How many users viewed more than one tids ? ...(3)
+
     - For a sanity check, (1) == (2)+(3)?
 
-3. Draw a table such as follows.
+4. Draw a table such as follows.
 
     - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one viewing time log (during watching a video) for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X for tid 1 can be calculated
     <br>(__Hint :__ groupby to the rescue)
 
     - For the *categorical* variables, you'll need to **count** how many times each category appeared in the logs. For example, how many times bitrate change occurred can be calculated
 
-    - Result would looks like this
+    - Result would looks like this. (column order does not matter here)
 
 
       | uid   | tid   | Viewing time('tVH') | ... | Bitrate change('brchg') | ... |
@@ -74,18 +84,18 @@ Here's a brief description of the variables including:
 Often times, we are interested in the summary statistics of our data.
 
 1. From the table above (Part1.3), find mean value, standard deviation, minimum value, maximum value for each column
-    - Describe the meaning of what you've calculated. For example, what does the mean value of 'some number' for viewing time represent?
+    - We want you to describe the meaning of what you've calculated. For example, what does the mean value of 'viewing time' represents?
 
-2. Plot histogram for each column
+2. Plot histogram for a column 'tVH'. Here, you can convert the time unit into 'minutes' if you want. 'tVH' is in milliseconds
 
 3. Draw one more table such as follows
-    - You'll use 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns again. Columns related to *time* are continuous variables, while others are categorical variables. Please refer to the table below. Note that 'tid' has gone
+    - You'll use 'uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt' columns again. Again, columns related to *time* are continuous variables, while others are categorical variables. Please refer to the table below. Note that 'tid' has gone
 
     - Find mean value, standard deviation, minimum value, maximum value for each column.
 
-    - Describe the meaning of what you've calculated. For example, what does the mean value of 'some number' for viewing time represent?
+    - We want you to describe the meaning of what you've calculated. For example, what does the mean value of 'viewing time' represents?
 
-    - Result would looks like this
+    - Result would looks like this (column order does not matter here)
 
 
         | uid   | Viewing time('tVH') | ... | ... | Bitrate change('brchg') | ... |
@@ -97,8 +107,6 @@ Often times, we are interested in the summary statistics of our data.
         | uid N | 5000                | ... | ... | 0                       | ... |
         | ...   | ...                 | ... | ... | ...                     | ... |
 
-_4. Find the user who has maximum viewing time (i.e. the length of the viewing time). How long did the user watched? 'tVH' is in milliseconds, how long the viewing time in hour?
+_4. Find the user who has maximum viewing time (i.e. the length of the viewing time). How long did the user watched? 'tVH' is in milliseconds, how long the viewing time in minutes?
 
-_5. Also find the user who watched most videos in terms of 'tid' (i.e. the number of videos). How many videos did the user watched?
-
-_6. Plot histogram for each column
+_5. Plot histogram for a column 'tVH'. Here, you can convert the time unit into 'minutes' if you want. 'tVH' is in milliseconds

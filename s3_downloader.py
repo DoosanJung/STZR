@@ -79,8 +79,9 @@ def gzip_to_csv(s3_path):
         for column_name in str_to_int_lst:
             str_to_int_ftn(df,column_name)
         # Keep only those columns
-        tmp_df = df[['ts2','eps','drt','errmsg','mplyevnt','spos','ssid',\
+        tmp_df = df[['ts2','eps','drt','mplyevnt','spos','ssid',\
                 'szrid','tBuf','tIBuf','tLBuf','tPld','tVH','tid','type','uid']]
+                ## 'errmsg' deleted for 20170504 ~
         # remove tid == Unset
         tmp_df_rmv_tid_Uns = tmp_df[tmp_df['tid']!='Unset']
         # Groupby uid
@@ -163,4 +164,4 @@ if __name__=="__main__":
     CKEY = '17943e6c6eec49cdb6'
 
     # run the function
-    get_files_from_s3(2017,04,06,2017,06,30)
+    get_files_from_s3(2017,05,04,2017,06,30)
