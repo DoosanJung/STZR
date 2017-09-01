@@ -9,7 +9,7 @@ bucket_name = 'stlz-dataengineer'
 key_name = 'interview-data/interview_data1'
 ```
 
-Use any library/package to read the file from S3. I recommend using the library `boto` if you planned to do it with `Python`.
+Use any library/package to read the file from S3. I recommend using the library `boto` if you plan to do it with `Python`.
 
 **NOTE: IF YOU CANNOT CONNECT TO OR DOWNLOAD THE DATA FROM AWS S3 BUCKET,
 USE THIS DATA** ['interview _data1'](https://drive.google.com/open?id=0B5rOf6SBB06BdFlCczhtaDA1Mk0) **INSTEAD**
