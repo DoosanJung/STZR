@@ -18,8 +18,7 @@ USE THIS DATA** ['interview _data1'](https://drive.google.com/open?id=0B5rOf6SBB
 
 ## Part 2: Understand the data
 
-The streamlyzer lets on-line video service providers measures viewers' experiences in real-time with their assets across various devices and environments. The Streamlyzer allows them to have new insight and tune their performance of their streaming service. The message front is the
-distributed message processing components of Streamlyzer.
+Our company lets on-line video service providers measures viewers' experiences in real-time with their assets across various devices and environments. Our company allows them to have new insight and tune their performance of their streaming service. The message front is the distributed message processing components of our company.
 
 Here's a brief description of the variables including:
 
