@@ -2,12 +2,17 @@ Include your answers to this morning's exercises in `answers.py` or `answers.ipy
 
 ## Part 1: Access to the data
 
-S3 is the storage system on AWS. Here, you will interact with it to take this test.
-The file name you need to connect and download is [`interview_data`](https://s3-us-west-2.amazonaws.com/stlz-dataengineer/interview-data/interview_data) in this S3 bucket. Use any library/package to read the file from S3.
-I recommend using the library `boto` if you planned to do it with `Python`.
+S3 is the storage system on AWS. Here, you will interact with it to take this test. You can use the information below to download the data. Please note that downloading this data will take while: about two to three minutes.
+
+```Python
+bucket_name = 'stlz-dataengineer'
+key_name = 'interview-data/interview_data1'
+```
+
+Use any library/package to read the file from S3. I recommend using the library `boto` if you planned to do it with `Python`.
 
 **NOTE: IF YOU CANNOT CONNECT TO OR DOWNLOAD THE DATA FROM AWS S3 BUCKET,
-USE THIS DATA** ['interview _data'](https://drive.google.com/open?id=0B5rOf6SBB06BaG9fNkQzRmowQ3M) **INSTEAD**
+USE THIS DATA** ['interview _data1'](https://drive.google.com/open?id=0B5rOf6SBB06BdFlCczhtaDA1Mk0) **INSTEAD**
 
 <br>
 
@@ -32,7 +37,8 @@ Here's a brief description of the variables including:
     - How many logs are there with this customer?
     - How many log types are there? (__Hint :__ 'type') and what are they?
 
-2. Drop the rows with 'tid' which do not have a specified user (__Hint :__'uid') from the data.
+2. Drop the rows with 'tid' which do not have a meaningful value (__Hint :__'tid' looks like this: 08e784c7-ecc5-4012-8674-0847dfdef2d1) from the data.
+  - You'll only need ['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt'] columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
 
     **Q2:**
     - How many users are there? ...(1)
@@ -41,7 +47,6 @@ Here's a brief description of the variables including:
     - For a sanity check, (1) == (2)+(3)?
 
 3. Draw a table such as follows.
-    - You'll only need ['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt'] columns from now on. Columns related to *time* are continuous variables, while others are categorical variables
 
     - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one viewing time log (during watching a video) for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X for tid 1 can be calculated
     <br>(__Hint :__ groupby to the rescue)
