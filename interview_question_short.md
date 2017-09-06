@@ -56,13 +56,7 @@ Here's a brief description of the variables including:
 
 3. Now we start analyzing this data
 
-    - How many unique users are there ? ...(1)
-
-    - How many users have only one tid ? ...(2)
-
-    - How many users have more than one tids ? ...(3)
-
-    - For a sanity check, (1) == (2)+(3)?
+    - How many unique users are there ? 
 
 4. Draw a table such as follows.
 
