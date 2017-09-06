@@ -67,7 +67,7 @@ Here's a brief description of the variables including:
 4. Draw a table such as follows.
 
     - For the *time* variables, such as tVH, you'll need to **sum** them to get the total time. For example, for uid X and tid 1, there can be more than one `viewing time` log (during watching a video) for this uid X and tid 1. In this case, summing up time variables within same uid and tid will give you the total time, which is presented in table below. For example, how long were the viewing time for uid X and tid 1 can be calculated
-    <br>(__Hint :__ `groupby` to the rescue)
+    <br>(__Hint :__ `Pandas.DataFrame.groupby` to the rescue)
 
     - For the *categorical* variables, you'll need to **count** how many times each category appeared in the logs. For example, how many times bitrate change occurred can be calculated
 
