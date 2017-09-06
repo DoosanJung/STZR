@@ -11,7 +11,7 @@ key_name = 'interview-data/interview_data1'
 
 Use any library/package to read the file from S3. I recommend using the library `boto` if you plan to do it with `Python`.
 
-**YOU DO NOT NEED AWS `AWS_ACCESS_KEY` AND `AWS_SECRET_ACCESS_KEY` FOR THIS SHORT TEST**
+**YOU DO NOT NEED `AWS_ACCESS_KEY` AND `AWS_SECRET_ACCESS_KEY` FOR THIS SHORT TEST**
 
 **NOTE: IF YOU CANNOT CONNECT TO OR DOWNLOAD THE DATA FROM AWS S3 BUCKET,
 USE THIS DATA** ['interview _data1'](https://drive.google.com/open?id=0B5rOf6SBB06BdFlCczhtaDA1Mk0) **INSTEAD**
@@ -45,12 +45,11 @@ Here's a brief description of the variables including:
     - From now on, we'll focus on a customer `'17943e6c6eec49cdb6'`. Remove all other customers for following analysis. (__Hint :__ 'ckey')
 
     - The data ranges from *2017-06-29 11:56 pm  ~  2017-06-30 01:20 am*
+2. Clean the data
 
-
-2. Drop the rows with `'tid'` equals to `Unset`
+    - Drop the rows with `'tid'` equals to `Unset`
 
     - You'll only need `['uid','tid','tBuf','tIBuf','tLBuf','tPld','tVH','type','mplyevnt']` columns from now on. Please note that columns related to *time* are continuous variables, while others are categorical variables
-
 
 3. Now we start analyzing this data
 
