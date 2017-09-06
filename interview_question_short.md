@@ -42,10 +42,11 @@ Here's a brief description of the variables including:
 
 1. Load the data
 
-    - From now on, we'll focus on a customer `'17943e6c6eec49cdb6'`. Remove all other customers for following analysis. (__Hint :__ 'ckey')
-
     - The data ranges from *2017-06-29 11:56 pm  ~  2017-06-30 01:20 am*
+
 2. Clean the data
+
+    - From now on, we'll focus on a customer `'17943e6c6eec49cdb6'`. Remove all other customers for following analysis. (__Hint :__ 'ckey')
 
     - Drop the rows with `'tid'` equals to `Unset`
 
