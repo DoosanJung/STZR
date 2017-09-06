@@ -44,6 +44,8 @@ Here's a brief description of the variables including:
 
     - The data ranges from *2017-06-29 11:56 pm  ~  2017-06-30 01:20 am*
 
+    - I recommend using the library `Pandas` if you plan to do it with `Python`
+
 2. Clean the data
 
     - From now on, we'll focus on a customer `'17943e6c6eec49cdb6'`. Remove all other customers for following analysis. (__Hint :__ 'ckey')
@@ -81,9 +83,6 @@ Here's a brief description of the variables including:
       | uid Y | tid 5 | 5000                | ... | 0                       | ... |
       | ...   | ...   | ...                 | ... | ...                     | ... |
 
-
-
-
 <br>
 
 ## Part 3: Descriptive statistics
@@ -93,5 +92,4 @@ Often times, we are interested in the summary statistics of our data.
 1. From the table above (Part2.4), calculate the average `Viewing Time`
     - We want you to describe the meaning of what you've calculated. For example, what does the mean value of 'viewing time' represents?
 
-
-2. Plot histogram for a column 'tVH'. Here, you can convert the time unit into 'minutes' if you want. 'tVH' is in milliseconds
+2. Plot histogram for `Viewing Time`.
